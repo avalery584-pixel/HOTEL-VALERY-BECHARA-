@@ -41,7 +41,7 @@
 <aside class="chat" id="chat" aria-label="Chat concierge"><div class="chat-head"><strong>Concierge Valery</strong><small>Asistente virtual · Disponible 24/6</small></div><div class="chat-log" id="chatLog"><div class="bubble">¡Hola! Bienvenido/a a Hotel Valery Bechara. ✨ Soy tu concierge virtual. ¿En qué puedo ayudarte?</div></div><div class="quick"><button data-question="Quiero conocer las habitaciones">Habitaciones</button><button data-question="Quiero reservar">Reservar</button><button data-question="¿Qué amenidades tienen?">Amenidades</button><button data-question="¿Cuál es el horario de atención?">Atención</button></div><form class="chat-input" id="chatForm"><input id="chatText" placeholder="Escribe tu consulta..." aria-label="Escribe tu consulta"><button>Enviar</button></form></aside>
 <script>
 /* CONFIGURACIÓN: reemplaza el valor por el WhatsApp oficial del hotel, con código de país y solo números. Ejemplo Colombia: 57 + número. */
-const HOTEL_WHATSAPP = "";
+const HOTEL_WHATSAPP = "573016781098";
 const chat=document.getElementById('chat'),log=document.getElementById('chatLog');
 function sendWhatsApp(message){if(!HOTEL_WHATSAPP){alert('El canal de WhatsApp está pendiente de configuración. El administrador debe agregar el número oficial del hotel en HOTEL_WHATSAPP dentro de index.html.');return;}window.open('https://wa.me/'+HOTEL_WHATSAPP+'?text='+encodeURIComponent(message),'_blank','noopener');}
 function addBubble(text,who='bot'){const b=document.createElement('div');b.className='bubble '+(who==='user'?'user':'');b.textContent=text;log.appendChild(b);log.scrollTop=log.scrollHeight;}
